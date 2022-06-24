@@ -15,6 +15,9 @@ const theme = createTheme({
   }
 });
 
+
+console.log("Hello world");
+
 const App = (): JSX.Element => {
   useEffect(() => {
     history.listen((location) => {
