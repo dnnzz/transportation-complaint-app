@@ -1,0 +1,31 @@
+.Footer {
+    width: 100%;
+    height: 100vmax;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: rgb(32, 74, 92);
+    ;
+}
+
+#wave {
+    position: relative;
+    fill: #EEE;
+    top: 5px;
+}
+
+#logo {
+    position: relative;
+    z-index: 1000;
+    width: 250px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    transform: translateX(-50%);
+    top: 50%;
+}
+
+.footerInfo {
+    width: 100%;
+    height: 100%;
+}

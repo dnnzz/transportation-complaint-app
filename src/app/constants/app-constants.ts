@@ -1,5 +1,5 @@
 const APP_CONSTANTS = {
-  APP_NAME: "Paraboly React Boilerplate",
+  APP_NAME: "Login Page",
   APP_VERSION: "1.0.0"
 };
 
