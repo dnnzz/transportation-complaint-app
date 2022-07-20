@@ -5,12 +5,11 @@
     flex-direction: column;
     justify-content: space-between;
     background-color: rgb(32, 74, 92);
-    ;
 }
 
 #wave {
     position: relative;
-    fill: #EEE;
+    fill: #eee;
     top: 5px;
 }
 

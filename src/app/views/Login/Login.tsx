@@ -5,7 +5,7 @@ import AuthService from "./services/AuthService";
 import APP_CONSTANTS from "@constants/app-constants";
 import { history } from "../../App";
 import "./style.scss";
-import {plt1,plt2} from  "assets/colorPalette"
+import { plt1, plt2 } from "assets/colorPalette";
 
 const Login = (): JSX.Element => {
   const [user, setUser] = useState({ email: "", password: "" });
@@ -71,7 +71,7 @@ const Login = (): JSX.Element => {
             )}
             <div className="login-btn">
               <Button
-              className="giris"
+                className="giris"
                 type="submit"
                 variant="contained"
                 disabled={loading}
