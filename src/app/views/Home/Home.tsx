@@ -4,7 +4,7 @@ import "./Home.scss";
 import Stats from "../../Containers/stats/Stats";
 
 const Home = (): JSX.Element => {
-  return <Stats> </Stats>;
+  return;
 };
 
 export default Home;

@@ -6,7 +6,7 @@ li {
 }
 
 a {
-    color: #eee;
+    color: rgb(56, 56, 56);
     text-decoration: none;
     width: 100%;
     height: 100%;
@@ -37,24 +37,43 @@ ul {
     height: 50px;
     border-radius: 30px;
     border: solid white 1px;
-    transition: .2s ease-in-out;
+    transition: 0.2s ease-in-out;
+    /* background: rgb(206, 249, 242);
+    background: linear-gradient( 90deg, rgba(206, 249, 242, 1) 0%, rgba(34, 146, 164, 1) 81%); */
+}
+
+.item {
+    border: none;
 }
 
 ul:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 80px;
+    width: 100px;
     height: 50px;
     border-radius: 30px;
-    background-color: #FFF;
-    color: brgb(35, 75, 88)lack;
-    border: solid rgb(35, 75, 88) 1px;
-    transition: .5s ease-in-out;
+    background-color: #fff;
+    color: brgb(35, 75, 88) lack;
+    transition: 0.5s ease-in-out;
+}
+
+.colorfulItem {
+    background-color: rgba(34, 146, 164, 1);
+    color: white;
+    width: 250px;
+}
+
+.colorfulItem a {
+    color: white;
+}
+
+.colorfulItem:hover {
+    width: 250px;
+    background-color: rgb(57, 190, 210);
 }
 
 .logoCont {
-    background-color: #FFF;
     position: relative;
     width: 210px;
     top: -20%;
@@ -66,7 +85,7 @@ ul:hover {
 .logo {
     width: auto;
     height: auto;
-    margin-top: 20px;
+    margin-top: 40px;
     border: none;
 }
 
