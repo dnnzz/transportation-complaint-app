@@ -1,22 +1,13 @@
 # Paraboly React Boilerplate
 
-> Paraboly react boilerplate web application repository.
-
-## TODO:
-- [x] Initial working version
-- [ ] Prettier config
-- [ ] Eslint config
-- [ ] Editor config
-- [ ] Haskey integration
-- [ ] Github actions
-- [ ] Fix multi-times hmr triggers
-- [ ] Refactoring webpack
 
 ## Installation
 
 1. Clone/download repo
-2. `npm install`
-
+2. If nvm is not installed , install nvm and type nvm use in command line
+3. run `npm install` afterwards if it throws error try below command
+4. run `npm install --save --legacy-peer-deps`command 
+5. `npm start` for start development server.
 ---
 
 ## Commands
