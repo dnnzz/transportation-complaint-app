@@ -5,9 +5,8 @@ import { createTheme, ThemeProvider } from "@mui/material";
 import PrivateRoute from "@components/CustomRouter/PrivateRoute/PrivateRoute";
 import CustomBrowserRouter from "@components/CustomRouter/CustomBrowserRouter/CustomBrowserRouter";
 import Login from "@views/Login/Login";
-import Home from "@views/Home/Home";
 import "./App.scss";
-
+import HomePage from "./Containers/app/HomePage";
 export const history = createBrowserHistory();
 const theme = createTheme({
   typography: {
@@ -25,17 +24,18 @@ const App = (): JSX.Element => {
   }, []);
 
   return (
-    <Suspense fallback={<div>Loading... </div>}>
-      <ThemeProvider theme={theme}>
-        <CustomBrowserRouter history={history}>
-          <Routes>
-            <Route path="/login" element={<Login />} />
-            <Route path="/" element={<PrivateRoute component={Home} />} />
-            <Route path="*" element={<Navigate to="/" />} />
-          </Routes>
-        </CustomBrowserRouter>
-      </ThemeProvider>
-    </Suspense>
+    // <Suspense fallback={<div>Loading... </div>}>
+    //   <ThemeProvider theme={theme}>
+    //     <CustomBrowserRouter history={history}>
+    //       <Routes>
+    //         <Route path="/login" element={<Login />} />
+    //         <Route path="/" element={<PrivateRoute component={HomePage} />} />
+    //         <Route path="*" element={<Navigate to="/" />} />
+    //       </Routes>
+    //     </CustomBrowserRouter>
+    //   </ThemeProvider>
+    // </Suspense>
+    <HomePage />
   );
 };
 

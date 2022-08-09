@@ -3,19 +3,15 @@
     width: 100vw;
     position: relative;
     overflow: hidden;
-
     .login-bg {
         height: 100%;
         width: 100%;
         position: absolute;
-        background: url("../../../assets/img/login/bg.jpeg");
-        background-size: cover;
-        background-position: center;
-        filter: blur(2px);
+        background: rgb(206, 249, 242);
+        background: linear-gradient(90deg, rgba(206, 249, 242, 1) 0%, rgba(238, 238, 238, 1) 100%);
         z-index: -1;
         transform: scale(1.03);
     }
-
     .login-content {
         position: fixed;
         left: 0;
@@ -26,78 +22,65 @@
         height: 560px;
         min-width: 300px;
         top: 15vh;
-
         .blurred-box {
             position: absolute;
             width: 100%;
             height: 100%;
             backdrop-filter: blur(5px);
-            background-color: #00000066;
+            background-color: #fff;
             border-radius: 20px;
             box-shadow: 0px 30px 50px 0px rgba(56, 75, 99, .61);
             z-index: -1;
         }
-
         .login-title {
             padding: 10px;
             padding-top: 20px;
             text-align: center;
-            color: #eeeeee;
-
+            color: #696969;
             h4 {
                 text-decoration: underline;
-                text-decoration-color: #ea8d20;
+                text-decoration-color: #F15152;
                 text-underline-offset: 5px;
                 padding-bottom: 10px;
             }
         }
-
         .login-form {
             padding: 40px;
             padding-top: 20px;
-
             h4 {
-                color: #eeeeee;
+                color: #696969;
                 text-decoration: underline;
-                text-decoration-color: #ea8d20;
+                text-decoration-color: #F15152;
                 text-underline-offset: 5px;
                 padding-bottom: 10px;
                 padding-left: 5px;
                 font-size: 1.8rem;
             }
-
             .MuiInputBase-root {
                 background-color: transparent;
             }
-
             .MuiFormHelperText-filled {
-                color: burlywood;
+                color: #F15152;
             }
-
             .MuiTextField-root {
                 margin-bottom: 20px;
             }
-
             .MuiInputLabel-root {
-                color: #eeeeee;
+                color: #696969;
             }
-
-            .MuiFilledInput-root::before {
-                border-bottom: 2px solid rgba(255, 255, 255, 0.42);
+            .MuiFilledInput-root::before,
+            .MuiFilledInput-root::after  {
+                border-bottom: 2px solid #2292A4;
             }
-
             input {
-                color: #eeeeee;
+                color: #696969;
             }
-
             .login-btn {
                 text-align: right;
-
                 &>.Mui-disabled {
-                    background-color: #3f51b5;
+                    background-color: #F15152;
                 }
             }
-
             .error {
                 color: whitesmoke;
                 position: absolute;
@@ -105,21 +88,22 @@
                 margin-top: 80px;
             }
         }
-
         .login-footer {
             text-align: center;
-
             img {
                 width: 120px;
             }
         }
     }
-
     input:-webkit-autofill,
     input:-webkit-autofill:hover,
     input:-webkit-autofill:focus,
     input:-webkit-autofill:active {
         transition: background-color 5000s ease-in-out 0s;
-        -webkit-text-fill-color: #eeeeee !important;
+        -webkit-text-fill-color: #696969 !important;
+    }
+    .giris,
+    .giris:hover {
+        background-color: #2292A4;
     }
 }
