@@ -18,7 +18,7 @@
   "license": "MIT",
   "author": "SchemeSonic",
   "scripts": {
-    "build": "NODE_ENV='production' npm run clean-dist && webpack --config=configs/webpack/prod.js",
+    "build": " npm run clean-dist && webpack --env NODE_ENV=production --config=configs/webpack/prod.js",
     "clean-dist": "rimraf dist/*",
     "lint": "eslint './src/**/*.{js,ts,tsx}' --quiet",
     "start": "source $HOME/.nvm/nvm.sh; nvm use --delete-prefix; npm run start-dev",
