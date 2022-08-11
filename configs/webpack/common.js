@@ -49,7 +49,8 @@ module.exports = {
   },
   plugins: [
     new Dotenv({
-      path: resolve(__dirname, "../../.env")
+      path: resolve(__dirname, "../../.env"),
+      systemvars:true
     }),
     new CopyPlugin({
       patterns: [

@@ -14,9 +14,5 @@ module.exports = merge(commonConfig, {
     path: resolve(__dirname, "../../dist"),
     publicPath: "/"
   },
-  plugins: [new webpack.DefinePlugin({
-    'process.env': {
-      'NODE_ENV': JSON.stringify(process.env.NODE_ENV || "production"),
-    }
-  })]
+  plugins: []
 });
