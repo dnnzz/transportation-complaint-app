@@ -1,0 +1,48 @@
+name: CI-CD
+
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+
+env:
+  NODE_VERSION: 16.16.0
+
+jobs:
+  build_and_publish:
+    name: Build and publish
+
+    runs-on: ubuntu-latest
+
+    outputs:
+      deploy-url: ${{ steps.deploy.outputs.deploy-url }}
+
+    steps:
+      - uses: actions/checkout@v2
+      - uses: c-hive/gha-yarn-cache@v1
+
+      - name: Setup Node
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build
+        run: npm build
+        
+      - name: Deploy to Netlify
+        id: deploy
+        uses: nwtgck/actions-netlify@v1.2.3
+        with:
+          publish-dir: './build'
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          github-deployment-environment: Netlify
+          deploy-message: ${{ github.event.pull_request.title }}
+          enable-commit-comment: false
+          enable-pull-request-comment: true
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
