@@ -21,10 +21,9 @@ module.exports = {
           {
             loader: "babel-loader",
             options: {
-              // plugins: [
-              //   isDevelopment && require.resolve("react-refresh/babel")
-              // ].filter(Boolean)
-              plugins:[]
+              plugins: [
+                isDevelopment && require.resolve("react-refresh/babel")
+              ].filter(Boolean)
             }
           }
         ],
@@ -50,8 +49,7 @@ module.exports = {
   },
   plugins: [
     new Dotenv({
-      path: resolve(__dirname, "../../.env"),
-      systemvars:true
+      path: resolve(__dirname, "../../.env")
     }),
     new CopyPlugin({
       patterns: [
