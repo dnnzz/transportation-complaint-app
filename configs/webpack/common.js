@@ -15,20 +15,21 @@ module.exports = {
   context: resolve(__dirname, "../../src"),
   module: {
     rules: [
-      // {
-      //   test: [/\.jsx?$/, /\.tsx?$/],
-      //   use: [
-      //     {
-      //       loader: "babel-loader",
-      //       options: {
-      //         plugins: [
-      //           isDevelopment && require.resolve("react-refresh/babel")
-      //         ].filter(Boolean)
-      //       }
-      //     }
-      //   ],
-      //   exclude: /node_modules/
-      // },
+      {
+        test: [/\.jsx?$/, /\.tsx?$/],
+        use: [
+          {
+            loader: "babel-loader",
+            options: {
+              // plugins: [
+              //   isDevelopment && require.resolve("react-refresh/babel")
+              // ].filter(Boolean)
+              plugins:[]
+            }
+          }
+        ],
+        exclude: /node_modules/
+      },
       {
         test: /\.css$/,
         use: ["style-loader", "css-loader"]
