@@ -6,7 +6,6 @@ import PrivateRoute from "@components/CustomRouter/PrivateRoute/PrivateRoute";
 import CustomBrowserRouter from "@components/CustomRouter/CustomBrowserRouter/CustomBrowserRouter";
 import Login from "@views/Login/Login";
 import "./App.scss";
-import HomePage from "./Containers/app/HomePage";
 export const history = createBrowserHistory();
 const theme = createTheme({
   typography: {
@@ -35,7 +34,8 @@ const App = (): JSX.Element => {
     //     </CustomBrowserRouter>
     //   </ThemeProvider>
     // </Suspense>
-    <HomePage />
+    // <HomePage />
+    <h1>Ci test</h1>
   );
 };
 
