@@ -2,7 +2,6 @@
 const { merge } = require("webpack-merge");
 const { resolve } = require("path");
 const webpack = require("webpack");
-const Dotenv = require("dotenv-webpack");
 
 
 const commonConfig = require("./common");
@@ -17,7 +16,7 @@ module.exports = merge(commonConfig, {
   },
   plugins: [new webpack.DefinePlugin({
     'process.env': {
-      'NODE_ENV': JSON.stringify(process.env.NODE_ENV),
+      'NODE_ENV': JSON.stringify(process.env.NODE_ENV || "production"),
     }
   })]
 });
