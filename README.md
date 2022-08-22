@@ -6,8 +6,9 @@
 1. Clone/download repo
 2. If nvm is not installed , install nvm and type nvm use in command line
 3. run `npm install` afterwards if it throws error try below command
-4. run `npm install --save --legacy-peer-deps`command 
-5. `npm start` for start development server.
+4. run `npm install --save --legacy-peer-deps`command
+5. If faced node-sass error try run following command `npm rebuild node-sass`
+6. `npm start` for start development server.
 ---
 
 ## Commands
