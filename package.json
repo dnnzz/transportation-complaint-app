@@ -20,7 +20,7 @@
   "scripts": {
     "build": "webpack --config=configs/webpack/prod.js",
     "clean-dist": "rimraf dist/*",
-    "netlify-build":"npm install --only=dev && npm run build",
+    "netlify-build":"npm install --only=dev && npm run build && --legacy-peer-deps",
     "lint": "eslint './src/**/*.{js,ts,tsx}' --quiet",
     "start": "source $HOME/.nvm/nvm.sh; nvm use --delete-prefix; npm run start-dev",
     "start-dev": "webpack serve --config=configs/webpack/dev.js --open",
