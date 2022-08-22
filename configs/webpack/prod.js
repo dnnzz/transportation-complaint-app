@@ -14,5 +14,7 @@ module.exports = merge(commonConfig, {
     path: resolve(__dirname, "../../dist"),
     publicPath: "/"
   },
-  plugins: []
+  plugins: [new webpack.EnvironmentPlugin({
+    NODE_ENV: 'production', // use 'development' unless process.env.NODE_ENV is defined
+  })]
 });
